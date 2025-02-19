@@ -947,6 +947,17 @@
     padding-top: 0.5em;
  }
 
+ .container {
+  text-align: center;
+}
+
+#reveal-text span {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(10px);
+  transition: opacity 0.6s ease-out, filter 0.6s ease-out;
+}
+
  .heading>div {
     transform-origin: 50% 100%;
     overflow: hidden;
