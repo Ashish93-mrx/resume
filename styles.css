@@ -352,7 +352,14 @@
     margin: 20px 0 40px;
     opacity: 0;
     animation: slideRight 1s ease forwards;
-    animation-delay: 1.3s;
+    animation-delay: 2.8s;
+  }
+  .home .home-content .text-11 {
+    font-size: 16px;
+    margin: 20px 0 40px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
   }
   @keyframes slideLeft {
     0% {

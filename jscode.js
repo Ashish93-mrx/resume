@@ -17,12 +17,19 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+document.querySelector('.coverx').addEventListener('animationend', function() {
+  this.style.zIndex = '-99999';
+  // Alternatively, you can set the height to 0
+  // this.style.height = '0%';
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   const textElement = document.getElementById("reveal-text");
   const text = textElement.textContent;
   textElement.innerHTML = '';
 
-  text.split('').forEach((char, index) => {
+  setTimeout(()=>{
+    text.split('').forEach((char, index) => {
       const span = document.createElement('span');
       span.textContent = char;
       textElement.appendChild(span);
@@ -32,12 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
           span.style.filter = 'blur(0)';
       }, index * 100); // Adjust the delay for each letter
   });
-});
-
-document.querySelector('.coverx').addEventListener('animationend', function() {
-  this.style.zIndex = '-99999';
-  // Alternatively, you can set the height to 0
-  // this.style.height = '0%';
+},1000);
 });
 
 $(document).ready(function () {
